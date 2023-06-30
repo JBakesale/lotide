@@ -2,7 +2,7 @@
 //   if (array1.length !== array2.length) {
 //     return false;
 //   }
-  
+
 //   for (let i = 0; i < array1.length; i++) {
 //     if (array1[i] !== array2[i]) {
 //       return false;
@@ -19,21 +19,41 @@
 //   }
 // };
 
-function countLetters(sentence) {
-  result = {};
-  
-  for (const letter of sentence) {
-    if (letter !== ' ') {
-      if (result[letter]) {
-        result[letter]++;
-      } else {
-        result[letter] = 1;
-      }
+const countLetters = function(str) {
+  const result = {};
+
+  for (const letter of str) {
+    
+    if (letter === ' ') {
+      continue;
     }
+    
+    if (!result[letter]) {
+      result[letter] = 0;
+    }
+
+    result[letter]++
   }
 
+
   return result;
-}
+};
+
+// function countLetters(sentence) {
+//   result = {};
+
+//   for (const letter of sentence) {
+//     if (letter !== ' ') {
+//       if (result[letter]) {
+//         result[letter]++;
+//       } else {
+//         result[letter] = 1;
+//       }
+//     }
+//   }
+
+//   return result;
+// }
 
 
 console.log(countLetters("lighthouse in the house"));
