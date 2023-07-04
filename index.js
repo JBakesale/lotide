@@ -6,10 +6,10 @@ const assertEqual = require('./assertEqual');
 const eqArray = require('./eqArray');
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  assertArraysEqual: assertArraysEqual,
-  assertEqual: assertEqual,
-  eqArray: eqArray
+  head,
+  tail,
+  middle,
+  assertArraysEqual,
+  assertEqual,
+  eqArray
 };
